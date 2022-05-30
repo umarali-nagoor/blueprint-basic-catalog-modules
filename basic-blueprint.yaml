@@ -1,0 +1,48 @@
+
+name: "basic"
+schema_version: "1.0.0"
+description: "Basic 2 component blueprint, RG & COS, no API key"
+inputs:
+  - name: resource_group_name
+  - name: provision_rg
+  - name: region
+  - name: cos_instance_name
+outputs:
+  - name: cos_id
+    value: $module.basic-cos-storage.outputs.cos_id
+settings:
+  - name: TF_VERSION
+    value: 1.0
+modules:
+  - name: basic-resource-group
+    layer: RG
+    source:
+      git: 
+        source_type: github
+        git_repo_url: "https://github.ibm.com/steve-strutt/bp-aio-basic/tree/master/IBM-ResourceGroup"
+        git_branch: master
+    inputs:
+      - name: provision
+        value: $blueprint.provision_rg
+      - name: name
+        value: $blueprint.resource_group_name
+    outputs:
+      - name: resource_group_name
+      - name: resource_group_id
+  - name: basic-cos-storage
+    layer: DB
+    source:
+      git:
+        source_type: github
+        git_repo_url: "https://github.ibm.com/steve-strutt/bp-aio-basic/tree/master/IBM-Storage"
+        git_branch: master
+    inputs:
+      - name: cos_instance_name
+        value: $blueprint.cos_instance_name
+      - name: cos_single_site_loc
+        value: "ams03"
+      - name: resource_group_id
+        value: $workitem.basic-resource-group.outputs.resource_group_id
+    outputs:
+      - name: cos_id
+      - name: cos_crn

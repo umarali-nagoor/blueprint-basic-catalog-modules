@@ -1,0 +1,7 @@
+# Common parameters
+region: us-east
+# Resource parameters
+resource_group_name: basic2comp-us
+provision_rg: true
+# COS parameters
+cos_instance_name: basic2comp-cos

@@ -1,0 +1,36 @@
+{
+    "name": "Blueprint Basic Very",
+    "schema_version": "1.0.0",
+    "source": {
+        "source_type": "git_hub",
+        "git": {
+            "git_repo_url": "https://github.ibm.com/steve-strutt/bp-aio-basic",
+            "git_repo_folder": "basic-blueprint.yaml",
+            "git_branch": "master"
+        }
+    },
+    "config": [
+        {
+            "source": {
+                "source_type": "git_hub",
+                "git": {
+                    "git_repo_url": "https://github.ibm.com/steve-strutt/bp-aio-basic",
+                    "git_repo_folder": "basic-config-us.yaml",
+                    "git_branch": "master"
+                }
+            },
+            "inputs": [
+                {
+                    "name": "region",
+                    "value": "eu-de"
+                },
+                {
+                    "name": "api_key",
+                    "value": "secret"
+                }
+            ]
+        }
+    ],
+    "description": "Deploys dev environtment instance in Toronto Region",
+    "resource_group": "Default"
+}

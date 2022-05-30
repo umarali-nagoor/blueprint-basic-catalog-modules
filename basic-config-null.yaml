@@ -1,0 +1,7 @@
+# COS parameters
+region: 
+# Resource parameters
+resource_group_name: 
+provision_rg: 
+# COS parameters
+cos_instance_name: 

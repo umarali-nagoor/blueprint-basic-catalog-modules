@@ -1,6 +1,6 @@
-provider "ibm" {
-  ibmcloud_api_key = var.ic_api_key
-}
+# provider "ibm" {
+#   ibmcloud_api_key = var.ic_api_key
+# }
 
 
 module "logging_instance" {

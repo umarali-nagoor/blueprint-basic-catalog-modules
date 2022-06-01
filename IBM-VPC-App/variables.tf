@@ -1,24 +1,24 @@
 
 
-variable "TF_VERSION" {
-  default     = "0.13"
-  description = "terraform engine version to be used in schematics"
-}
+# variable "TF_VERSION" {
+#   default     = "0.13"
+#   description = "terraform engine version to be used in schematics"
+# }
 
 ##############################################################################
 # Account Variables
 ##############################################################################
 
-variable "ibmcloud_api_key" {
-  description = "The IBM Cloud platform API key needed to deploy IAM enabled resources"
-  type        = string
-}
+# variable "ibmcloud_api_key" {
+#   description = "The IBM Cloud platform API key needed to deploy IAM enabled resources"
+#   type        = string
+# }
 
-variable "vpc_region" {
-  description = "IBM Cloud region where all resources will be deployed"
-  type        = string
-  default     = "us-south"
-}
+# variable "vpc_region" {
+#   description = "IBM Cloud region where all resources will be deployed"
+#   type        = string
+#   default     = "us-south"
+# }
 
 variable "unique_id" {
   description = "Name of the VSI"

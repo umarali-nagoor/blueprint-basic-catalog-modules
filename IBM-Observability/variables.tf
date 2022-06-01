@@ -1,10 +1,10 @@
 ###################################################################
 # Common parameters
 ###################################################################
-variable "ic_api_key" {
-  description = "IBM cloud apiKey"
-  type        = string
-}
+# variable "ic_api_key" {
+#   description = "IBM cloud apiKey"
+#   type        = string
+# }
 
 
 variable "resource_group_id" {

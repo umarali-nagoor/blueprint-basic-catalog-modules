@@ -1,10 +1,5 @@
 
 
-# variable "TF_VERSION" {
-#   default     = "0.13"
-#   description = "terraform engine version to be used in schematics"
-# }
-
 ##############################################################################
 # Account Variables
 ##############################################################################
@@ -12,12 +7,13 @@
 # variable "ibmcloud_api_key" {
 #   description = "The IBM Cloud platform API key needed to deploy IAM enabled resources"
 #   type        = string
+#   sensitive   = true
 # }
 
 variable "vpc_region" {
   description = "IBM Cloud region where all resources will be deployed"
   type        = string
-  default     = "us-south"
+  default     = "us-east"
 }
 
 variable "unique_id" {
@@ -49,6 +45,7 @@ variable "vsi_per_subnet" {
 variable "ssh_public_key" {
   description = "ssh public key to use for vsi"
   type        = string
+  sensitive   = true
 }
 
 variable "machine_type" {

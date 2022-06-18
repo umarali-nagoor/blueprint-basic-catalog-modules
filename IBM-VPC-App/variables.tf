@@ -14,11 +14,11 @@
 #   type        = string
 # }
 
-# variable "vpc_region" {
-#   description = "IBM Cloud region where all resources will be deployed"
-#   type        = string
-#   default     = "us-south"
-# }
+variable "vpc_region" {
+  description = "IBM Cloud region where all resources will be deployed"
+  type        = string
+  default     = "us-south"
+}
 
 variable "unique_id" {
   description = "Name of the VSI"
@@ -41,9 +41,9 @@ variable "image" {
 }
 
 variable "vsi_per_subnet" {
-    description = "Number of VSI instances for each subnet. All VSI will be connected by a single load balancer"
-    type        = number
-    default     = 2
+  description = "Number of VSI instances for each subnet. All VSI will be connected by a single load balancer"
+  type        = number
+  default     = 2
 }
 
 variable "ssh_public_key" {
@@ -53,7 +53,7 @@ variable "ssh_public_key" {
 
 variable "machine_type" {
   description = "VSI machine type. Run 'ibmcloud is instance-profiles' to get a list of regional profiles. For Gen 1 use bc1-2x8, for Gen 2 use bx2-2x8"
-  type        =  string
+  type        = string
   default     = "bx2-2x8"
 }
 
@@ -76,7 +76,7 @@ variable "volumes" {
       tags           = list(string) # Optional
   }))
   */
-  default     = [
+  default = [
     {
       name     = "one"
       profile  = "10iops-tier"

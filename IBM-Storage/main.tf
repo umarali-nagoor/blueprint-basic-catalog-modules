@@ -60,11 +60,3 @@ resource "ibm_resource_instance" "cos_instance" {
 
 }
 
-
-resource "ibm_cos_bucket" "standard-ams03" {
-  bucket_name          = "${var.cos_bucket_name}-${random_id.name.hex}"
-  resource_instance_id = ibm_resource_instance.cos_instance.id
-  single_site_location = var.cos_single_site_loc
-  storage_class        = var.cos_storage_class
-}
-

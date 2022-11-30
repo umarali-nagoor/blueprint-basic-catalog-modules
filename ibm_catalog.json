@@ -1,15 +1,15 @@
 {
     "name": "blueprint-basic-modules",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "flavors": [
         {
-            "label": "IBM Storage",
-            "name": "ibm-storage-cos",
+            "label": "Variation1",
+            "name": "variation1",
             "working_directory": "IBM-Storage"
         },
         {
-            "label": "IBM ResourceGroup",
-            "name": "ibm-resource-group",
+            "label": "Variation2",
+            "name": "variation2",
             "working_directory": "IBM-ResourceGroup"
         }
     ]
